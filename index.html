@@ -10,15 +10,8 @@
     <meta property="og:url" content="https://elantris.github.io/" />
     <meta property="og:image" content="https://elantris.github.io/profile.jpg" />
     <base target="_blank" />
-    <title>Elantris | Front End Developer</title>
+    <title>Elantris | Frontend Developer</title>
     <link rel="shortcut icon" href="profile.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/open-color/1.9.1/open-color.min.css"
-      integrity="sha512-2w5aQudV1xnQLU0ED240kcVlHuIEwapWiW9hOIQnLxZM5zbPEU8e+eVGTw4jD/sU0hPkI10707ceWTt1s0VBlA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -30,52 +23,119 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
-    <div class="container mx-auto my-8 rounded p-8 w-full max-w-2xl">
+  <body class="bg-gray-800 text-gray-400 text-lg">
+    <section class="py-16 text-center">
       <div class="avatar mb-4 mx-auto w-32 h-32 rounded-full bg-center"></div>
-      <h1 class="mb-8 text-3xl text-center">Elantris Hsu</h1>
-      <p class="mb-4 text-justify">
-        一名專職資訊系統的網頁前端工程師，參與過 SaaS
-        平台服務、後台管理、內部系統等專案，主要工作內容包含設計系統架構、規劃前端資料流、串接後端服務、實作商業邏輯等。
-      </p>
-      <p class="mb-4 text-justify">
-        自 2015
-        年開始自學網頁前端技術，於實習中、正職中面臨新挑戰並且持續學習新技能。曾擔任小組長主導團隊開發進度，負責的任務包含開發流程細節規劃、主持
-        Code Review 會議、技術分享、員工訓練、管裡 Git 專案等。
-      </p>
-      <p class="mb-4 text-justify">
-        閒暇時間熱衷於網頁相關技術，密切關注現代前端框架、第三方套件、雲端服務等社群趨勢。偶爾撰寫網頁爬蟲、瀏覽器插件、聊天室機器人等專案將日常生活的瑣事自動化。
-      </p>
-      <p class="mb-2 text-justify">目前營運中的 Discord 機器人服務：</p>
-      <ul class="mb-8 pl-4">
-        <li class="list-disc">
-          <a class="text-blue-400" href="https://hackmd.io/@eelayntris/attention-please">Attention Please</a>
-          <p>透過文字訊息中的標記成員與表情回應來實作 Discord 已讀簽到功能。</p>
-        </li>
-        <li class="list-disc">
-          <a class="text-blue-400" href="https://hackmd.io/@eelayntris/commander">Commander</a>
-          <p>透過指令快速紀錄「當前有接聽語音頻道」的伺服器成員並且匯出出席統計報表。</p>
-        </li>
-        <li class="list-disc">
-          <a class="text-blue-400" href="https://hackmd.io/@eelayntris/eedice">eeDice</a>
-          <p>支援各種骰子語法，讓 GM、DM、KP 都能輕鬆使用，減少計算負擔讓玩家都能更沉浸在劇情當中。</p>
-        </li>
-        <li class="list-disc">
-          <a class="text-blue-400" href="https://hackmd.io/@eelayntris/what2eat">What2Eat</a>
-          <p>隨機抽選一道 Foodpanda 上出現的餐點，提供靈感給不知道吃什麼才好的人。</p>
-        </li>
-      </ul>
+      <h1 class="text-3xl text-violet-400">Elantris Hsu</h1>
+      <div class="mb-16 text-xl text-gray-200">Frontend Developer</div>
+      <div class="mx-auto px-8 w-full max-w-2xl">
+        <p class="mb-8 text-justify">
+          一名專職資訊系統的網頁前端工程師，參與過電子商務平台服務、產品內容後台管理系統、企業內部管理系統等專案，主要工作內容包含設計操作流程、規劃系統架構、實作前端資料流、串接後端服務等。
+        </p>
+        <p class="mb-8 text-justify">
+          曾擔任小組長主導團隊開發進度，與 PM 討論客戶需求與流程規劃、主持 Scrum 會議協助安排開發流程、主持 Code Review
+          會議強化整體程式碼品質、整理技術文件分享知識協助其他同事完成任務、負責公司內各專案的 Git 架構等管理工作。
+        </p>
+      </div>
+    </section>
 
+    <section class="py-16 bg-slate-600 text-gray-200" id="skills">
+      <h2 class="w-full mb-16 text-center text-5xl text-gray-400">Skills</h2>
+      <div class="mx-auto w-full max-w-5xl">
+        <div class="flex justify-between flex-wrap">
+          <div class="mb-8 w-full md:w-4/12 px-8">
+            <h3 class="mb-4 text-xl text-center">Language</h3>
+            <ul class="pl-4">
+              <li>HTML / CSS / JavaScript</li>
+              <li>Sass / Less</li>
+              <li>TypeScript</li>
+              <li>PostgreSQL / GraphQL</li>
+            </ul>
+          </div>
+          <div class="mb-8 w-full md:w-4/12 px-8">
+            <h3 class="mb-4 text-xl text-center">Development</h3>
+            <ul class="pl-4">
+              <li>Git</li>
+              <li>Node.js</li>
+              <li>ESLint</li>
+              <li>Prettier</li>
+              <li>Webpack</li>
+              <li>Vite</li>
+            </ul>
+          </div>
+          <div class="mb-8 w-full md:w-4/12 px-8">
+            <h3 class="mb-4 text-xl text-center">Framework</h3>
+            <ul class="pl-4">
+              <li>Ant Design</li>
+              <li>Bootstrap</li>
+              <li>Material UI</li>
+              <li>Semantic UI</li>
+              <li>Tailwind CSS</li>
+              <li>React.js</li>
+              <li>Express.js</li>
+              <li>Next.js</li>
+              <li>Firebase</li>
+              <li>Hasura</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16" id="projects">
+      <h2 class="w-full mb-16 text-center text-5xl">Projects</h2>
+      <div class="mx-auto w-full max-w-5xl">
+        <div class="flex justify-between flex-wrap">
+          <div class="mb-8 w-full md:w-6/12 px-4">
+            <img src="https://i.imgur.com/RnwGtgt.png" alt="attention-please" class="w-full" />
+            <div class="p-4 bg-zinc-800">
+              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/attention-please"> 簽到提醒機器人 </a>
+              <p>透過文字訊息中的標記成員與表情回應來實作 Discord 已讀簽到功能。</p>
+            </div>
+          </div>
+          <div class="mb-8 w-full md:w-6/12 px-4">
+            <img src="https://i.imgur.com/jpJz873.png" alt="Commander" class="w-full" />
+            <div class="p-4 bg-zinc-800">
+              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/commander"> 點名紀錄機器人 </a>
+              <p>使用指令快速紀錄「當前有接聽語音頻道」的伺服器成員同時製作出席統計報表。</p>
+            </div>
+          </div>
+          <div class="mb-8 w-full md:w-6/12 px-4">
+            <img src="https://i.imgur.com/2UJO8Ew.png" alt="attention-please" class="w-full" />
+            <div class="p-4 bg-zinc-800">
+              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/eedice">擲骰計算機器人</a>
+              <p>支援各種骰子語法，讓 GM、DM、KP 都能輕鬆使用，減少計算負擔讓玩家都能更沉浸在劇情當中。</p>
+            </div>
+          </div>
+          <div class="mb-8 w-full md:w-6/12 px-4">
+            <img src="https://i.imgur.com/qAcd7El.png" alt="attention-please" class="w-full" />
+            <div class="p-4 bg-zinc-800">
+              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/what2eat">吃什麼機器人</a>
+              <p>隨機抽選一道外送平台上出現的餐點，提供靈感給不知道吃什麼才好的人。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 bg-gray-900">
       <div class="text-center">
         <a href="https://github.com/Elantris">
-          <button class="py-2 px-4 rounded hover:bg-gray-500 transition-all">
-            <i class="fa-brands fa-github text-2xl"></i></button
-        ></a>
+          <button class="py-2 px-4 rounded hover:bg-gray-600 transition-all">
+            <i class="fa-brands fa-github text-2xl"></i>
+          </button>
+        </a>
+        <a href="https://www.linkedin.com/in/elantris/">
+          <button class="py-2 px-4 rounded hover:bg-sky-600 transition-all">
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </button>
+        </a>
         <a href="https://discord.gg/Ctwz4BB">
-          <button class="py-2 px-4 rounded hover:bg-indigo-500 transition-all">
-            <i class="fa-brands fa-discord text-2xl"></i></button
-        ></a>
+          <button class="py-2 px-4 rounded hover:bg-indigo-600 transition-all">
+            <i class="fa-brands fa-discord text-2xl"></i>
+          </button>
+        </a>
       </div>
-    </div>
+    </footer>
   </body>
 </html>

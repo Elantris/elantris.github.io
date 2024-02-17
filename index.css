@@ -2,19 +2,7 @@
   display: none !important;
 }
 
-body {
-  background: var(--oc-gray-9);
-}
-
-.container {
-  color: var(--oc-gray-5);
-}
-
 .avatar {
   background-image: url('./profile.jpg');
   background-size: 153%;
-}
-
-h1 {
-  color: var(--oc-gray-0);
 }
