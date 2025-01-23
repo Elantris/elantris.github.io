@@ -1,8 +1,0 @@
-#__bs_notify__ {
-  display: none !important;
-}
-
-.avatar {
-  background-image: url('./profile.jpg');
-  background-size: 153%;
-}

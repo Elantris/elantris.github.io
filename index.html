@@ -5,137 +5,229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta property="og:title" content="Elantris | Front End Developer" />
+    <meta property="og:title" content="Elantris | Front-end Developer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://elantris.github.io/" />
     <meta property="og:image" content="https://elantris.github.io/profile.jpg" />
     <base target="_blank" />
-    <title>Elantris | Frontend Developer</title>
+    <title>Elantris | Front-end Developer</title>
     <link rel="shortcut icon" href="profile.jpg" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./index.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-color/1.9.1/open-color.min.css"
+      integrity="sha512-2w5aQudV1xnQLU0ED240kcVlHuIEwapWiW9hOIQnLxZM5zbPEU8e+eVGTw4jD/sU0hPkI10707ceWTt1s0VBlA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--oc-gray-9);
+        color: var(--oc-gray-5);
+        font-family: "Noto Sans", serif;
+        font-optical-sizing: auto;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100dvh;
+        padding: 1rem;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        width: 100%;
+        max-width: 370px;
+        border-radius: 1rem;
+        padding: 1.25rem;
+        overflow: hidden;
+        text-align: center;
+
+        &::before {
+          z-index: 10;
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 70vmax;
+          height: 70vmax;
+          background-image: linear-gradient(var(--oc-violet-1), var(--oc-violet-5));
+          animation-name: rotate;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        &::after {
+          z-index: 11;
+          content: "";
+          position: absolute;
+          inset: 0.25rem;
+          border-radius: inherit;
+          background-image: linear-gradient(var(--oc-gray-8), var(--oc-gray-8));
+          background-origin: padding-box;
+          background-clip: padding-box;
+        }
+
+        > * {
+          z-index: 12;
+          position: relative;
+        }
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .avatar {
+        aspect-ratio: 1/1;
+        width: 8rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .title {
+        color: var(--oc-violet-3);
+      }
+
+      .social-links {
+        width: 100%;
+        text-align: left;
+        list-style: none;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        color: var(--oc-violet-0);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: var(--oc-violet-3);
+          background: var(--oc-gray-7);
+        }
+      }
+
+      .icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+        aspect-ratio: 1/1;
+        width: 2rem;
+        font-size: 1.5rem;
+      }
+
+      .qrcode {
+        margin: 2rem auto;
+        padding: 0.5rem;
+        aspect-ratio: 1/1;
+        width: 12rem;
+        border-radius: 1rem;
+        background-color: white;
+
+        > img {
+          width: 100%;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .qrcode {
+          display: none;
+        }
+      }
+    </style>
   </head>
 
-  <body class="bg-gray-800 text-gray-400 text-lg">
-    <section class="py-16 text-center">
-      <div class="avatar mb-4 mx-auto w-32 h-32 rounded-full bg-center"></div>
-      <h1 class="text-3xl text-violet-400">Elantris Hsu</h1>
-      <div class="mb-16 text-xl text-gray-200">Frontend Developer</div>
-      <div class="mx-auto px-8 w-full max-w-2xl">
-        <p class="mb-8 text-justify">
-          一名專職資訊系統的網頁前端工程師，參與過電子商務平台服務、產品內容後台管理系統、企業內部管理系統等專案，主要工作內容包含設計操作流程、規劃系統架構、實作前端資料流、串接後端服務等。
-        </p>
-        <p class="mb-8 text-justify">
-          曾擔任小組長主導團隊開發進度，與 PM 討論客戶需求與流程規劃、主持 Scrum 會議協助安排開發流程、主持 Code Review
-          會議強化整體程式碼品質、整理技術文件分享知識協助其他同事完成任務、負責公司內各專案的 Git 架構等管理工作。
-        </p>
-      </div>
-    </section>
+  <body>
+    <div class="container">
+      <main>
+        <img src="./profile.jpg" alt="profile" class="avatar" />
+        <h1 class="title">Elantris</h1>
+        <h2>Front-end Developer</h2>
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com/Elantris" class="link">
+              <div class="icon"><i class="fa-brands fa-github"></i></div>
+              <span>github.com/Elantris</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/elantris/" class="link">
+              <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+              <span>www.linkedin.com/in/elantris/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/Ctwz4BB" class="link">
+              <div class="icon"><i class="fa-brands fa-discord"></i></div>
+              <span>discord.gg/Ctwz4BB</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://hackmd.io/@eelayntris" class="link">
+              <div class="icon"><i class="fa-solid fa-file-lines"></i></div>
+              <span>hackmd.io/@eelayntris</span>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
 
-    <section class="py-16 bg-slate-600 text-gray-200" id="skills">
-      <h2 class="w-full mb-16 text-center text-5xl text-gray-400">Skills</h2>
-      <div class="mx-auto w-full max-w-5xl">
-        <div class="flex justify-between flex-wrap">
-          <div class="mb-8 w-full md:w-4/12 px-8">
-            <h3 class="mb-4 text-xl text-center">Language</h3>
-            <ul class="pl-4">
-              <li>HTML / CSS / JavaScript</li>
-              <li>Sass / Less</li>
-              <li>TypeScript</li>
-              <li>PostgreSQL / GraphQL</li>
-            </ul>
-          </div>
-          <div class="mb-8 w-full md:w-4/12 px-8">
-            <h3 class="mb-4 text-xl text-center">Development</h3>
-            <ul class="pl-4">
-              <li>Git</li>
-              <li>Node.js</li>
-              <li>ESLint</li>
-              <li>Prettier</li>
-              <li>Webpack</li>
-              <li>Vite</li>
-            </ul>
-          </div>
-          <div class="mb-8 w-full md:w-4/12 px-8">
-            <h3 class="mb-4 text-xl text-center">Framework</h3>
-            <ul class="pl-4">
-              <li>Ant Design</li>
-              <li>Bootstrap</li>
-              <li>Material UI</li>
-              <li>Semantic UI</li>
-              <li>Tailwind CSS</li>
-              <li>React.js</li>
-              <li>Express.js</li>
-              <li>Next.js</li>
-              <li>Firebase</li>
-              <li>Hasura</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16" id="projects">
-      <h2 class="w-full mb-16 text-center text-5xl">Projects</h2>
-      <div class="mx-auto w-full max-w-5xl">
-        <div class="flex justify-between flex-wrap">
-          <div class="mb-8 w-full md:w-6/12 px-4">
-            <img src="https://i.imgur.com/RnwGtgt.png" alt="attention-please" class="w-full" />
-            <div class="p-4 bg-zinc-800">
-              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/attention-please"> 簽到提醒機器人 </a>
-              <p>透過文字訊息中的標記成員與表情回應來實作 Discord 已讀簽到功能。</p>
-            </div>
-          </div>
-          <div class="mb-8 w-full md:w-6/12 px-4">
-            <img src="https://i.imgur.com/jpJz873.png" alt="Commander" class="w-full" />
-            <div class="p-4 bg-zinc-800">
-              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/commander"> 點名紀錄機器人 </a>
-              <p>使用指令快速紀錄「當前有接聽語音頻道」的伺服器成員同時製作出席統計報表。</p>
-            </div>
-          </div>
-          <div class="mb-8 w-full md:w-6/12 px-4">
-            <img src="https://i.imgur.com/2UJO8Ew.png" alt="attention-please" class="w-full" />
-            <div class="p-4 bg-zinc-800">
-              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/eedice">擲骰計算機器人</a>
-              <p>支援各種骰子語法，讓 GM、DM、KP 都能輕鬆使用，減少計算負擔讓玩家都能更沉浸在劇情當中。</p>
-            </div>
-          </div>
-          <div class="mb-8 w-full md:w-6/12 px-4">
-            <img src="https://i.imgur.com/qAcd7El.png" alt="attention-please" class="w-full" />
-            <div class="p-4 bg-zinc-800">
-              <a class="text-blue-400" href="https://hackmd.io/@eelayntris/what2eat">吃什麼機器人</a>
-              <p>隨機抽選一道外送平台上出現的餐點，提供靈感給不知道吃什麼才好的人。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="py-8 bg-gray-900">
-      <div class="text-center">
-        <a href="https://github.com/Elantris">
-          <button class="py-2 px-4 rounded hover:bg-gray-600 transition-all">
-            <i class="fa-brands fa-github text-2xl"></i>
-          </button>
-        </a>
-        <a href="https://www.linkedin.com/in/elantris/">
-          <button class="py-2 px-4 rounded hover:bg-sky-600 transition-all">
-            <i class="fa-brands fa-linkedin text-2xl"></i>
-          </button>
-        </a>
-        <a href="https://discord.gg/Ctwz4BB">
-          <button class="py-2 px-4 rounded hover:bg-indigo-600 transition-all">
-            <i class="fa-brands fa-discord text-2xl"></i>
-          </button>
-        </a>
-      </div>
-    </footer>
+    <div class="qrcode">
+      <img src="./qrcode.png" alt="qrcode" />
+    </div>
   </body>
 </html>
