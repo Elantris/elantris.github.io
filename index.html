@@ -1,31 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta property="og:title" content="Elantris | Front-end Developer" />
+    <meta property="og:title" content="Elantris | Front-end Engineer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://elantris.github.io/" />
     <meta property="og:image" content="https://elantris.github.io/profile.jpg" />
     <base target="_blank" />
-    <title>Elantris | Front-end Developer</title>
+    <title>Elantris | Front-end Engineer</title>
     <link rel="shortcut icon" href="profile.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/open-color/1.9.1/open-color.min.css"
-      integrity="sha512-2w5aQudV1xnQLU0ED240kcVlHuIEwapWiW9hOIQnLxZM5zbPEU8e+eVGTw4jD/sU0hPkI10707ceWTt1s0VBlA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -36,198 +23,176 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background: var(--oc-gray-9);
-        color: var(--oc-gray-5);
-        font-family: "Noto Sans", serif;
-        font-optical-sizing: auto;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100dvh;
-        padding: 1rem;
-      }
-
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        position: relative;
-        width: 100%;
-        max-width: 370px;
-        border-radius: 1rem;
-        padding: 1.25rem;
-        overflow: hidden;
-        text-align: center;
-
-        &::before {
-          z-index: 10;
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 70vmax;
-          height: 70vmax;
-          background-image: linear-gradient(var(--oc-violet-1), var(--oc-violet-5));
-          animation-name: rotate;
-          animation-duration: 5s;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-        }
-
-        &::after {
-          z-index: 11;
-          content: "";
-          position: absolute;
-          inset: 0.25rem;
-          border-radius: inherit;
-          background-image: linear-gradient(var(--oc-gray-8), var(--oc-gray-8));
-          background-origin: padding-box;
-          background-clip: padding-box;
-        }
-
-        > * {
-          z-index: 12;
-          position: relative;
-        }
-      }
-
-      h1 {
-        margin: 0;
-      }
-
-      h2 {
-        margin: 0;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      ul {
-        margin: 0;
-        padding: 0;
-      }
-
-      .avatar {
-        aspect-ratio: 1/1;
-        width: 8rem;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-
-      .title {
-        color: var(--oc-violet-3);
-      }
-
-      .social-links {
-        width: 100%;
-        text-align: left;
-        list-style: none;
-      }
-
-      .link {
-        display: flex;
-        align-items: center;
-        padding: 0.5rem;
-        color: var(--oc-violet-0);
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          color: var(--oc-violet-3);
-          background: var(--oc-gray-7);
-        }
-      }
-
-      .icon {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0.5rem;
-        aspect-ratio: 1/1;
-        width: 2rem;
-        font-size: 1.5rem;
-      }
-
-      .qrcode {
-        margin: 2rem auto;
-        padding: 0.5rem;
-        aspect-ratio: 1/1;
-        width: 12rem;
-        border-radius: 1rem;
-        background-color: white;
-
-        > img {
-          width: 100%;
-        }
-      }
-
-      @keyframes rotate {
-        from {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-        to {
-          transform: translate(-50%, -50%) rotate(360deg);
-        }
-      }
-
-      @media (min-width: 768px) {
-        .qrcode {
-          display: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
-    <div class="container">
-      <main>
-        <img src="./profile.jpg" alt="profile" class="avatar" />
-        <h1 class="title">Elantris</h1>
-        <h2>Front-end Developer</h2>
-        <ul class="social-links">
-          <li>
-            <a href="https://github.com/Elantris" class="link">
-              <div class="icon"><i class="fa-brands fa-github"></i></div>
-              <span>github.com/Elantris</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/elantris/" class="link">
-              <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
-              <span>www.linkedin.com/in/elantris/</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://discord.gg/Ctwz4BB" class="link">
-              <div class="icon"><i class="fa-brands fa-discord"></i></div>
-              <span>discord.gg/Ctwz4BB</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://hackmd.io/@eelayntris" class="link">
-              <div class="icon"><i class="fa-solid fa-file-lines"></i></div>
-              <span>hackmd.io/@eelayntris</span>
-            </a>
-          </li>
-        </ul>
-      </main>
-    </div>
+    <main id="elantris">
+      <label class="theme-switch">
+        <input type="checkbox" role="switch" id="theme-switch" />
+        <i class="fa-solid fa-sun theme-icon theme-icon-light" aria-hidden="true"></i>
+        <i class="fa-solid fa-moon theme-icon theme-icon-dark" aria-hidden="true"></i>
+        <span class="visually-hidden switch-label-dark">Dark theme</span>
+        <span class="visually-hidden switch-label-light">Light theme</span>
+      </label>
 
-    <div class="qrcode">
-      <img src="./qrcode.png" alt="qrcode" />
-    </div>
+      <details class="tree" open>
+        <summary class="node" aria-label="Profile">
+          <span class="caret">▼</span>
+          <span class="tag">&lt;main</span>
+          <span class="attr">id</span>=<span class="attr-value">"elantris"</span><span class="tag">&gt;</span
+          ><span class="node-closed"><span class="dots">…</span><span class="tag">&lt;/main&gt;</span></span>
+          <span class="ref">== $0</span>
+        </summary>
+        <div class="tree-body">
+          <section class="box-model" aria-label="Profile">
+            <div class="layer layer-margin" data-label="margin">
+              <div class="layer layer-border" data-label="border">
+                <div class="layer layer-padding" data-label="padding">
+                  <div class="content">
+                    <div class="avatar-frame">
+                      <img src="./profile.jpg" alt="Elantris" class="avatar" width="96" height="96" />
+                      <span class="tooltip" aria-hidden="true"
+                        ><span class="tooltip-tag">img.avatar</span> 96 × 96</span
+                      >
+                    </div>
+                    <h1 class="name">Elantris</h1>
+                    <p class="role">Front-end Engineer</p>
+                    <ul class="social" aria-label="Social links">
+                      <li>
+                        <a
+                          href="https://github.com/Elantris"
+                          class="social-button"
+                          data-link="github"
+                          aria-label="GitHub"
+                        >
+                          <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/elantris/"
+                          class="social-button"
+                          data-link="linkedin"
+                          aria-label="LinkedIn"
+                        >
+                          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://discord.gg/Ctwz4BB"
+                          class="social-button"
+                          data-link="discord"
+                          aria-label="Discord"
+                        >
+                          <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://hackmd.io/@eelayntris"
+                          class="social-button"
+                          data-link="hackmd"
+                          aria-label="HackMD"
+                        >
+                          <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="rule" aria-label="Links">
+            <div class="rule-head" aria-hidden="true">
+              <span><span class="selector">#elantris</span> {</span>
+              <span class="source">index.css:80</span>
+            </div>
+            <ul class="declarations">
+              <li>
+                <a
+                  href="https://github.com/Elantris"
+                  class="declaration"
+                  data-link="github"
+                  aria-label="GitHub: github.com/Elantris"
+                >
+                  <span class="property">--github</span>
+                  <span class="value"
+                    ><i class="fa-brands fa-github" aria-hidden="true"></i>url(github.com/Elantris)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/elantris/"
+                  class="declaration"
+                  data-link="linkedin"
+                  aria-label="LinkedIn: linkedin.com/in/elantris"
+                >
+                  <span class="property">--linkedin</span>
+                  <span class="value"
+                    ><i class="fa-brands fa-linkedin" aria-hidden="true"></i>url(linkedin.com/in/elantris)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://discord.gg/Ctwz4BB"
+                  class="declaration"
+                  data-link="discord"
+                  aria-label="Discord: discord.gg/Ctwz4BB"
+                >
+                  <span class="property">--discord</span>
+                  <span class="value"
+                    ><i class="fa-brands fa-discord" aria-hidden="true"></i>url(discord.gg/Ctwz4BB)</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://hackmd.io/@eelayntris"
+                  class="declaration"
+                  data-link="hackmd"
+                  aria-label="HackMD: hackmd.io/@eelayntris"
+                >
+                  <span class="property">--hackmd</span>
+                  <span class="value"
+                    ><i class="fa-solid fa-file-lines" aria-hidden="true"></i>url(hackmd.io/@eelayntris)</span
+                  >
+                </a>
+              </li>
+              <li class="cursor-line" aria-hidden="true"><span class="cursor"></span></li>
+            </ul>
+            <div class="rule-end" aria-hidden="true">}</div>
+          </section>
+        </div>
+      </details>
+
+      <footer class="crumbs" aria-hidden="true">
+        <span>html</span>
+        <span>body</span>
+        <span class="crumb-current">main#elantris</span>
+      </footer>
+    </main>
+
+    <figure class="qrcode">
+      <details class="tree" open>
+        <summary class="node" aria-label="QR code">
+          <span class="caret">▼</span>
+          <span class="tag">&lt;figure</span>
+          <span class="attr">class</span>=<span class="attr-value">"qrcode"</span><span class="tag">&gt;</span
+          ><span class="node-closed"><span class="dots">…</span><span class="tag">&lt;/figure&gt;</span></span>
+        </summary>
+        <div class="tree-body">
+          <img src="./qrcode.png" alt="QR code for elantris.github.io" class="qrcode-image" />
+        </div>
+      </details>
+    </figure>
   </body>
 </html>
